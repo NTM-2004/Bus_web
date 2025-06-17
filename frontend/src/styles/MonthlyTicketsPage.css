@@ -1,0 +1,277 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.monthly-tickets-page {
+  max-width: 520px;
+  margin: 48px auto;
+  padding: 32px 28px;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 12px rgba(51, 122, 183, 0.10);
+  min-height: 80vh;
+  /* Allow vertical scrolling if content overflows */
+  overflow-y: auto;
+}
+
+@media (max-width: 600px) {
+  .monthly-tickets-page {
+    padding: 18px 6px;
+    margin: 24px 2px;
+    min-height: 100vh;
+  }
+}
+.monthly-tickets-page h2 {
+  color: #337ab7;
+  font-weight: 600;
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+.monthly-tickets-page ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px 0;
+}
+
+.monthly-tickets-page li {
+  background: #f8fafd;
+  border-radius: 5px;
+  margin-bottom: 14px;
+  padding: 16px 14px;
+  box-shadow: 0 1px 4px rgba(51, 122, 183, 0.07);
+  font-size: 1.05rem;
+}
+
+.monthly-tickets-page img {
+  display: block;
+  margin-top: 8px;
+  border-radius: 4px;
+  border: 1px solid #e3e3e3;
+}
+
+.monthly-tickets-page h3 {
+  color: #337ab7;
+  margin-top: 32px;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.monthly-tickets-page form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  background: #f5f7fa;
+  border-radius: 6px;
+  padding: 18px 14px;
+  box-shadow: 0 1px 4px rgba(51, 122, 183, 0.07);
+}
+
+.monthly-tickets-page label {
+  font-weight: 500;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.monthly-tickets-page select,
+.monthly-tickets-page input[type="date"],
+.monthly-tickets-page input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccd6dd;
+  border-radius: 4px;
+  font-size: 1rem;
+  background: #fff;
+  margin-bottom: 0;
+  transition: border 0.2s;
+}
+
+.monthly-tickets-page select:focus,
+.monthly-tickets-page input:focus {
+  border-color: #337ab7;
+  outline: none;
+}
+
+.monthly-tickets-page button[type="submit"] {
+  padding: 10px;
+  background: #337ab7;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-top: 8px;
+  transition: background 0.2s;
+  cursor: pointer;
+}
+
+.monthly-tickets-page button[type="submit"]:hover:not(:disabled) {
+  background: #23527c;
+}
+
+.monthly-tickets-page button[type="submit"]:disabled {
+  background: #b0b7be;
+  cursor: not-allowed;
+}
+
+.ticket-header {
+  font-weight: 700;
+  font-size: 24px;
+  color: #337ab7;
+  margin-bottom: 12px;
+}
+
+.ticket-date {
+  font-weight: 700;
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.ticket-price {
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+.ticket-status {
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+.ticket-status-expired {
+  color: red;
+}
+
+.ticket-status-active {
+  color: #337ab7;
+}
+
+.ticket-qr {
+  width: 260px;
+  margin: 24px auto;
+  display: block;
+}
+
+.ticket-expired-message {
+  margin-top: 24px;
+}
+
+.ticket-expired-title {
+  color: red;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.ticket-expired-action {
+  margin-top: 12px;
+  font-size: 16px;
+}
+
+.ticket-expired-btn {
+  margin-left: 12px;
+  padding: 6px 18px;
+  font-size: 16px;
+  background: #337ab7;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.ticket-expired-btn:hover {
+  background: #23527c;
+}
+
+.ticket-buy-summary {
+  margin-top: 24px;
+  font-weight: 700;
+  font-size: 20px;
+  color: #337ab7;
+}
+
+.ticket-buy-form {
+  max-width: 340px;
+  margin: 32px auto 0 auto;
+  background: #f5f7fa;
+  border-radius: 8px;
+  box-shadow: 0 1px 8px rgba(51, 122, 183, 0.10);
+  padding: 24px 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.ticket-buy-form label {
+  font-weight: 600;
+  color: #337ab7;
+  margin-bottom: 6px;
+  font-size: 1.05rem;
+}
+
+.ticket-buy-form input[type="date"] {
+  width: 100%;
+  padding: 9px 10px;
+  border: 1px solid #ccd6dd;
+  border-radius: 4px;
+  font-size: 1rem;
+  background: #fff;
+  margin-bottom: 0;
+  transition: border 0.2s;
+}
+
+.ticket-buy-form input[type="date"]:focus {
+  border-color: #337ab7;
+  outline: none;
+}
+
+.ticket-buy-summary {
+  margin-top: 0;
+  font-weight: 600;
+  font-size: 1.08rem;
+  color: #23527c;
+  background: #eaf2fb;
+  border-radius: 5px;
+  padding: 10px 12px;
+  text-align: center;
+}
+
+.ticket-buy-btn {
+  padding: 11px 0;
+  background: linear-gradient(90deg, #337ab7 60%, #23527c 100%);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 1.08rem;
+  margin-top: 8px;
+  transition: background 0.2s;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+}
+
+.ticket-buy-btn:disabled {
+  background: #b0b7be;
+  cursor: not-allowed;
+}
+
+.ticket-buy-btn:not(:disabled):hover {
+  background: #23527c;
+}
+
+.ticket-buy-message {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.ticket-buy-message.error {
+  color: #d9534f;
+}
+
+.ticket-buy-message.success {
+  color: #5cb85c;
+}

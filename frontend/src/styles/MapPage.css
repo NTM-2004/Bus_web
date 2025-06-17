@@ -1,0 +1,15 @@
+.map-page {
+  display: flex;
+  height: calc(100vh - 60px); /* Adjust for header height */
+  background: #f5f7fa;
+  overflow: hidden;
+  min-width: 0;
+}
+
+@media (max-width: 900px) {
+  .map-page {
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+  }
+}
